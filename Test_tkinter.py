@@ -4,7 +4,6 @@ from tkinter import *
 window = Tk()
 
 def fonction():
-
     global valeur
     valeur = saisir.get()
     print(valeur)
