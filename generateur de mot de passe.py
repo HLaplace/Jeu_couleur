@@ -26,7 +26,7 @@ frame = Frame(window, bg="#A80A0E")
 width = 300
 height = 300
 #reglage de l'image
-image = PhotoImage(file="password.png").zoom(18).subsample(32)
+image = PhotoImage(file="password.png").zoom(18).subsample(32)       # image contenu dans le dossier ou est le code
 canvas = Canvas(frame, width=width, height=height, bg="#A80A0E",bd=0,highlightthickness=0 )
 canvas.create_image(width/2, height/2, image=image)
 canvas.grid(row=0, column=0, sticky=W)
