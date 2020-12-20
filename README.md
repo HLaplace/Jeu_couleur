@@ -8,5 +8,5 @@ est de bien maitriser l'utilisation de la poo et l'utilisation de la librairie t
 La branche main contient les codes du jeu couleur en cours.
 Tandis que la branche code test contient des code de test.
 
----> Dernier push le 5/10/2020
+---> Dernier push le 15/10/2020
 
