@@ -14,8 +14,7 @@ class interface:
         self.root.minsize(480, 360)
         self.score = 0
         self.definition_aleatoire()
-        self.root.mainloop() # a mettre a la fin du __init__
-
+        self.root.mainloop()
 
     def definition_aleatoire(self):
 
@@ -44,7 +43,7 @@ class interface:
 
         # créer frame
         self.frame = Frame(self.root, bg=self.color)
-        self.frame.pack(expand=YES)
+        self.frame.pack()#expand=YES)
 
         # consigne
         self.label_consigne = Label(self.frame, text="Ecrivez la couleur du mot et pas le mot en lui même.", font=("Arial", 20),
@@ -58,7 +57,7 @@ class interface:
         # suivi score
         self.label_score = Label(self.root, text=self.score, font=("Arial", 20), fg="black", bg=self.color)
         self.label_score.grid(row=1, column=1, padx=(100, 10))
-        #self.label_score.pack()#expand=YES)
+        self.label_score.pack(expand=YES)
 
         # barre de texte
         global saisie
