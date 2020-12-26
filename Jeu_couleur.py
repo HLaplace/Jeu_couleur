@@ -1,4 +1,3 @@
-import tkinter as tk
 "update"
 from tkinter import *
 import random
@@ -57,15 +56,16 @@ class interface:
         self.label_title.pack(expand=YES)
 
         # suivi score
-        self.label_score = Label(self.frame, text=self.score, font=("Arial", 20), fg="black", bg=self.color)
-        self.label_score.pack(expand=YES)
+        self.label_score = Label(self.root, text=self.score, font=("Arial", 20), fg="black", bg=self.color)
+        self.label_score.grid(row=1, column=1, padx=(100, 10))
+        #self.label_score.pack()#expand=YES)
 
         # barre de texte
         global saisie
 
         self.saisie = Entry(textvariable=StringVar(), width=20, justify=CENTER)
         self.saisie.focus_set()
-        self.saisie.pack()
+        self.saisie.pack(expand=YES)
 
         self.root.bind('<Return>', self.callback)
         self.root.update()
