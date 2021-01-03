@@ -1,4 +1,3 @@
-"update"
 from tkinter import *
 import random
 
@@ -43,7 +42,7 @@ class interface:
 
         # créer frame
         self.frame = Frame(self.root, bg=self.color)
-        self.frame.pack()#expand=YES)
+        self.frame.pack(expand=YES)
 
         # consigne
         self.label_consigne = Label(self.frame, text="Ecrivez la couleur du mot et pas le mot en lui même.", font=("Arial", 20),
@@ -55,16 +54,14 @@ class interface:
         self.label_title.pack(expand=YES)
 
         # suivi score
-        self.label_score = Label(self.root, text=self.score, font=("Arial", 20), fg="black", bg=self.color)
-        self.label_score.grid(row=1, column=1, padx=(100, 10))
+        self.label_score = Label(self.frame, text=self.score, font=("Arial", 20), fg="black", bg=self.color)
         self.label_score.pack(expand=YES)
 
         # barre de texte
-        global saisie
-
+        #global saisie
         self.saisie = Entry(textvariable=StringVar(), width=20, justify=CENTER)
         self.saisie.focus_set()
-        self.saisie.pack(expand=YES)
+        self.saisie.pack()
 
         self.root.bind('<Return>', self.callback)
         self.root.update()
@@ -72,7 +69,7 @@ class interface:
     def fonction_verification(self):
 
         if self.zoneSaisie == self.var_temp or self.zoneSaisie == self.var_temp_4:
-            print("ok couleur")
+
             self.label_consigne.destroy()
             self.frame.destroy()
             self.label_title.destroy()
@@ -83,7 +80,9 @@ class interface:
             self.definition_aleatoire()
 
         else:
-            print("perdu")
+            print("Perdu")
+            print('\033[31m' + "Votre score est de " + str(self.score) + " points.")
+            print('\033[0m')
             exit()
 
     def callback(self,event):
