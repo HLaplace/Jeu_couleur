@@ -14,4 +14,4 @@ Tandis que la branche code test contient des code de test.
     
 ---> Push du 20/12/2020
     ---> Supression du fichier "jeu_couleur_v1.py"
-    ---> Le fichier "Jeu_couleur" est une version stable sans timer
+    ---> Le fichier "Jeu_couleur" est une version 1 stable sans timer
