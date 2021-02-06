@@ -1,4 +1,5 @@
 # programme pour recuperer une touche dans la console
+# sous linux / windows
 
 import os
 
